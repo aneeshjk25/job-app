@@ -1,11 +1,36 @@
 <mat-toolbar color="primary">
-    <button
-      type="button"
-      aria-label="Toggle sidenav"
-      mat-icon-button
-      (click)="drawer.toggle()"
-      *ngIf="isHandset$ | async">
-      <mat-icon aria-label="Side nav toggle icon"></mat-icon>
-    </button>
-    <span>{{jobDetail.title}}</span>
-  </mat-toolbar>
+  <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+    *ngIf="isHandset$ | async">
+    <mat-icon aria-label="Side nav toggle icon"></mat-icon>
+  </button>
+  <span>{{jobDetail.title}}</span>
+</mat-toolbar>
+<div>
+    <br>
+    <div class="container">
+      <div class="container">
+        <div fxLayout="row" fxLayoutAlign="center center" class="content">
+          <mat-card class="card">
+            <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+              <h3>Job Description</h3>
+            </mat-card-title>
+            <mat-card-content fxLayout="row">
+              <div class="mat-elevation-z8" >
+                  <mat-card >
+                      <mat-card-header>
+                          <mat-card-title>{{jobDetail.title}}</mat-card-title>
+                          <mat-card-subtitle>{{jobDetail.zip_code}}, {{jobDetail.city}}</mat-card-subtitle>
+                        </mat-card-header>
+                      <img style="max-width:150px;" mat-card-image [src]="jobDetail.thumbnail" />
+                      <mat-card-content>
+                        <p>{{jobDetail.description}}</p>
+                      </mat-card-content>
+                    </mat-card>
+
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>

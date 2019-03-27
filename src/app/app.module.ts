@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSidenavModule, MatListModule, MatToolbarModule, MatButtonModule, MatIconModule} from '@angular/material'
+import {MatSidenavModule, MatListModule, MatToolbarModule, MatButtonModule, MatIconModule, MatCardModule} from '@angular/material'
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -43,7 +43,8 @@ const appRoutes: Routes = [
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   providers: [
     JobDetailResolve
