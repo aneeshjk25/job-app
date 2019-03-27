@@ -11,15 +11,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { JobDetailComponent } from './job-detail/job-detail.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { JobDetailResolve } from './job-details.resolve';
 
 const appRoutes: Routes = [
   {
     path: 'job', component: AppComponent,
-    // children: [
-    //   {
-    //     path: ':id'
-    //   }
-    // ]
+  },
+  {
+    path: 'job-detail/:id', component : JobDetailComponent, resolve: {
+      jobDetail: JobDetailResolve
+    }
   }
 ]
 
@@ -37,14 +38,16 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      { enableTracing: false } // <-- debugging purposes only
     ),
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [
+    JobDetailResolve
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
