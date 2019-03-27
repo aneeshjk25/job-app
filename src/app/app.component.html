@@ -1,8 +1,8 @@
 <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
-        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-        [mode]="(isHandset$ | async) ? 'over' : 'side'"
-        [opened]="!(isHandset$ | async)">
+        [attr.role]="'navigation'"
+        [mode]="'side'"
+        [opened]="true">
       <mat-toolbar>Jobs</mat-toolbar>
       <mat-nav-list>
           <a mat-list-item *ngFor="let jobDetail of jobDetails" [routerLink]="['job-detail', jobDetail.id]">{{jobDetail.title}}</a>

@@ -1,8 +1,4 @@
 <mat-toolbar color="primary">
-  <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
-    *ngIf="isHandset$ | async">
-    <mat-icon aria-label="Side nav toggle icon"></mat-icon>
-  </button>
   <span>{{jobDetail.title}}</span>
 </mat-toolbar>
 <div>
@@ -11,7 +7,7 @@
       <div class="container">
         <div fxLayout="row" fxLayoutAlign="center center" class="content">
           <mat-card class="card">
-            <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+            <mat-card-title fxLayout="row">
               <h3>Job Description</h3>
             </mat-card-title>
             <mat-card-content fxLayout="row">
@@ -26,7 +22,6 @@
                         <p>{{jobDetail.description}}</p>
                       </mat-card-content>
                     </mat-card>
-
               </div>
             </mat-card-content>
           </mat-card>

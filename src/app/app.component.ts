@@ -11,10 +11,6 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
   jobDetails: Response.JobDetail[];
   constructor(private JobsService: JobsService, private breakpointObserver: BreakpointObserver) {
 
