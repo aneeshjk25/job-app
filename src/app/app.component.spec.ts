@@ -6,7 +6,7 @@ import { of } from 'rxjs';
 import { JobsService } from './jobs.service';
 import { Response } from './models/response';
 
-fdescribe('AppComponent', () => {
+describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
   beforeEach(async(() => {
