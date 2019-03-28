@@ -8,7 +8,7 @@ const app = express();
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/advertisement-report'));
 app.use('/api', proxy({
-    target: '', changeOrigin: true, pathRewrite: {
+    target: process.env.BACKEND, changeOrigin: true, pathRewrite: {
         "^/api": ""
     }
 }))
