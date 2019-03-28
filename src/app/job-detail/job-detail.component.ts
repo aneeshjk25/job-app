@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { Response } from '../models/response';
-import { filter, merge } from 'rxjs/operators';
-import { forkJoin, zip } from 'rxjs';
+import { filter } from 'rxjs/operators';
+import { zip } from 'rxjs';
 
 @Component({
   selector: 'app-job-detail',
