@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Response } from './models/response';
 import { JobsService } from './jobs.service';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
   jobDetails: Response.JobDetail[];
-  constructor(private JobsService: JobsService, private breakpointObserver: BreakpointObserver) {
+  constructor(private JobsService: JobsService) {
 
   }
   ngOnInit(): void {
