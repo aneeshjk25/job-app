@@ -6,7 +6,7 @@ var proxy = require('http-proxy-middleware')
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static('./dist/advertisement-report'));
+app.use(express.static('./dist/job-app'));
 app.use('/api', proxy({
     target: process.env.BACKEND, changeOrigin: true, pathRewrite: {
         "^/api": ""
