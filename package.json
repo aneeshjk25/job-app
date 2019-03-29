@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "serve": "ng serve --proxy-config proxy.conf.js",
+    "start": "ng serve --proxy-config proxy.conf.js",
     "build": "ng build",
     "test": "ng test --browsers=ChromeHeadless",
     "lint": "ng lint",
